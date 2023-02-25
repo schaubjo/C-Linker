@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		294E6EDE29AAA3220058FF5E /* starter_linker.c in Sources */ = {isa = PBXBuildFile; fileRef = 294E6ED929AAA3220058FF5E /* starter_linker.c */; };
-		294E6EDF29AAA3220058FF5E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 294E6EDB29AAA3220058FF5E /* Makefile */; };
+		294E6EE829AACAC50058FF5E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 294E6EE129AACAC50058FF5E /* Makefile */; };
+		294E6EE929AACAC50058FF5E /* starter_linker.c in Sources */ = {isa = PBXBuildFile; fileRef = 294E6EE729AACAC50058FF5E /* starter_linker.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,13 +25,14 @@
 
 /* Begin PBXFileReference section */
 		294E6ECD29AAA2EE0058FF5E /* p2-linker.c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "p2-linker.c"; sourceTree = BUILT_PRODUCTS_DIR; };
-		294E6ED729AAA3220058FF5E /* main.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; name = main.as; path = ../../../../../Downloads/starter_2l/main.as; sourceTree = "<group>"; };
-		294E6ED829AAA3220058FF5E /* subone.obj.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = subone.obj.correct; path = ../../../../../Downloads/starter_2l/subone.obj.correct; sourceTree = "<group>"; };
-		294E6ED929AAA3220058FF5E /* starter_linker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = starter_linker.c; path = ../../../../../Downloads/starter_2l/starter_linker.c; sourceTree = "<group>"; };
-		294E6EDA29AAA3220058FF5E /* main.obj.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.obj.correct; path = ../../../../../Downloads/starter_2l/main.obj.correct; sourceTree = "<group>"; };
-		294E6EDB29AAA3220058FF5E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../../../../Downloads/starter_2l/Makefile; sourceTree = "<group>"; };
-		294E6EDC29AAA3220058FF5E /* subone.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; name = subone.as; path = ../../../../../Downloads/starter_2l/subone.as; sourceTree = "<group>"; };
-		294E6EDD29AAA3220058FF5E /* count5.mc.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = count5.mc.correct; path = ../../../../../Downloads/starter_2l/count5.mc.correct; sourceTree = "<group>"; };
+		294E6EE029AAC5CD0058FF5E /* output */ = {isa = PBXFileReference; lastKnownFileType = text; path = output; sourceTree = "<group>"; };
+		294E6EE129AACAC50058FF5E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		294E6EE229AACAC50058FF5E /* main.obj.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.obj.correct; sourceTree = "<group>"; };
+		294E6EE329AACAC50058FF5E /* subone.obj.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subone.obj.correct; sourceTree = "<group>"; };
+		294E6EE429AACAC50058FF5E /* count5.mc.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = count5.mc.correct; sourceTree = "<group>"; };
+		294E6EE529AACAC50058FF5E /* main.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; path = main.as; sourceTree = "<group>"; };
+		294E6EE629AACAC50058FF5E /* subone.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; path = subone.as; sourceTree = "<group>"; };
+		294E6EE729AACAC50058FF5E /* starter_linker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = starter_linker.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +65,14 @@
 		294E6ECF29AAA2EE0058FF5E /* p2-linker.c */ = {
 			isa = PBXGroup;
 			children = (
-				294E6ED929AAA3220058FF5E /* starter_linker.c */,
-				294E6EDD29AAA3220058FF5E /* count5.mc.correct */,
-				294E6ED729AAA3220058FF5E /* main.as */,
-				294E6EDA29AAA3220058FF5E /* main.obj.correct */,
-				294E6EDB29AAA3220058FF5E /* Makefile */,
-				294E6EDC29AAA3220058FF5E /* subone.as */,
-				294E6ED829AAA3220058FF5E /* subone.obj.correct */,
+				294E6EE729AACAC50058FF5E /* starter_linker.c */,
+				294E6EE429AACAC50058FF5E /* count5.mc.correct */,
+				294E6EE529AACAC50058FF5E /* main.as */,
+				294E6EE229AACAC50058FF5E /* main.obj.correct */,
+				294E6EE129AACAC50058FF5E /* Makefile */,
+				294E6EE629AACAC50058FF5E /* subone.as */,
+				294E6EE329AACAC50058FF5E /* subone.obj.correct */,
+				294E6EE029AAC5CD0058FF5E /* output */,
 			);
 			path = "p2-linker.c";
 			sourceTree = "<group>";
@@ -132,8 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				294E6EDF29AAA3220058FF5E /* Makefile in Sources */,
-				294E6EDE29AAA3220058FF5E /* starter_linker.c in Sources */,
+				294E6EE929AACAC50058FF5E /* starter_linker.c in Sources */,
+				294E6EE829AACAC50058FF5E /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

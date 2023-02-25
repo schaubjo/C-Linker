@@ -5,6 +5,75 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>15E33F03-CCD9-4819-A528-CE536D410699</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>15E33F03-CCD9-4819-A528-CE536D410699.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699058923.43551695</real>
+			<key>timeStoppedRecording</key>
+			<real>699058930.81788898</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>15E33F03-CCD9-4819-A528-CE536D410699</string>
+		</dict>
+		<key>D20DEBD1-973E-4BA6-B74D-F51BE87CFE27</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D20DEBD1-973E-4BA6-B74D-F51BE87CFE27.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699058640.89860904</real>
+			<key>timeStoppedRecording</key>
+			<real>699058642.80064094</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>D20DEBD1-973E-4BA6-B74D-F51BE87CFE27</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

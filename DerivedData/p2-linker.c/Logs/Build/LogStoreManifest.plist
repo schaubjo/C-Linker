@@ -5,6 +5,75 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>9D7ADDFB-12C7-469C-91E4-066A5303F366</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9D7ADDFB-12C7-469C-91E4-066A5303F366.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699058923.07928097</real>
+			<key>timeStoppedRecording</key>
+			<real>699058923.43465996</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>9D7ADDFB-12C7-469C-91E4-066A5303F366</string>
+		</dict>
+		<key>ACBDCC11-CDBD-46FB-A7FD-BE73DDA64797</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ACBDCC11-CDBD-46FB-A7FD-BE73DDA64797.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699058640.77757096</real>
+			<key>timeStoppedRecording</key>
+			<real>699058640.89791596</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>ACBDCC11-CDBD-46FB-A7FD-BE73DDA64797</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
