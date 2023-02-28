@@ -17,7 +17,7 @@ typedef struct SymbolTableEntry SymbolTableEntry;
 typedef struct RelocationTableEntry RelocationTableEntry;
 typedef struct CombinedFiles CombinedFiles;
 
-int resolve_local();
+
 struct SymbolTableEntry {
 	char label[7];
 	char location;
@@ -54,6 +54,14 @@ struct CombinedFiles {
 	int symTableSize;
 	int relocTableSize;
 };
+
+int resolve_local(int curr_file, int num_files, struct FileData files[]);
+//int resolve_global();
+
+CombinedFiles combined_init(struct FileData files[], const int num_files);
+void print_symbols(struct CombinedFiles combined);
+void print_relocation(struct CombinedFiles combined);
+
 
 int main(int argc, char *argv[])
 {
@@ -150,61 +158,160 @@ int main(int argc, char *argv[])
 	//    Happy coding!!!
     
     // iterate through all files
+    const int num_files = argc - 2;
+    struct CombinedFiles linked_files = combined_init(files, num_files);
     
-    for (int f = 0; f < argc - 2; f++) {
-        
-        // iterate through each line in text section
-        for (int t = 0; t < files[f].textSize; t++) {
-            bool resolve = false;
-            
-            // check the relocation table to see if it is a line that needs to be resolved
-            for (int r = 0; r < files[f].relocationTableSize; r++) {
-                if (files[f].relocTable[r].offset == t) {
-                    resolve = true;
-                    break;
-                }
-            }
-            
-            // if this line was in the relocation table, we need to resolve the offset
-            if (resolve) {
-                
-                // local labels
-                if (!isupper(files[f].relocTable[t].label[0])) {
-                    // add text lines from files before this file to offset
-                    int before = 0;
-                    for (int b = 0; b < t; b++) {
-                        before += files[b].textSize;
-                    }
-                    
-                    // add text lines from files after this file to offset
-                    int after = 0;
-                    for (int a = f + 1; a < argc - 2; a++) {
-                        after += files[a].textSize;
-                    }
-                    
-                    fprintf(outFilePtr, "%d\n", files[f].text[t] + before + after);
-                }
-                
-                // global labels
-                else {
-                    
-                }
-                
-            }
-            else {
-                fprintf(outFilePtr, "%d\n", files[f].text[t]);
-            }
-        }
-    }
+//    for (int f = 0; f < num_files; f++) {
+//
+//        // iterate through each line in text section
+//        for (int t = 0; t < files[f].textSize; t++) {
+//            bool resolve = false;
+//
+//            // check the relocation table to see if it is a line that needs to be resolved
+//            for (int r = 0; r < files[f].relocationTableSize; r++) {
+//                if (files[f].relocTable[r].offset == t) {
+//                    resolve = true;
+//                    break;
+//                }
+//            }
+//
+//            // if this line was in the relocation table, we need to resolve the offset
+//            if (resolve) {
+//
+//                // local labels
+//                if (!isupper(files[f].relocTable[t].label[0])) {
+//                    int new_offset = resolve_local(f, num_files, files);
+//                    // output original text + new offset
+//                    fprintf(outFilePtr, "%d\n", files[f].text[t] + new_offset);
+//                }
+//
+//                // global labels
+//                else {
+//
+//                }
+//            }
+//
+//            else {
+//                fprintf(outFilePtr, "%d\n", files[f].text[t]);
+//            }
+//        }
+//    }
 
 } // main
 
-int resolve_loca() {
+int resolve_local(int curr_file, int num_files, struct FileData files[]) {
     
     // resolve local labels that have to point to data section within its own file
-    int before = 0;
-//    for (int b = 0; b < t; b++) {
-//
-//    }
-    return 0;
+    
+    // add up the number of text lines before the current text file
+    int before_text = 0;
+    for (int b = 0; b < curr_file; b++) {
+        before_text += files[b].textSize;
+    }
+    
+    // add up the number of text lines after the current text file
+    int after_text = 0;
+    for (int a = curr_file + 1; a < num_files; a++) {
+        after_text += files[a].textSize;
+    }
+    
+    // add the number of data lines before the current file's data section
+    int before_data = 0;
+    for (int d = 0; d < curr_file; d++) {
+        before_data += files[d].dataSize;
+    }
+    return before_text + after_text + before_data;
 }
+
+CombinedFiles combined_init(struct FileData files[], const int num_files) {
+    
+    struct CombinedFiles linked_files;
+    
+    // used as a counter for total text and data lines in all files
+    int i = 0;
+    
+    // iterate through each file's text, and add it to the combined text
+    for (int f = 0; f < num_files; f++) {
+        // also initialize the start of each file's text section for logic later
+        files[f].textStartingLine = i;
+        for (int t = 0; t < files[f].textSize; t++) {
+            linked_files.text[i] = files[f].text[t];
+            i++;
+        }
+    }
+    
+    linked_files.textSize = i;
+    
+    // iterate through each file's data, and add it to the combined data
+    for (int f = 0; f < num_files; f++) {
+        // also initialize the start of each file's data section for logic later
+        files[f].dataStartingLine = i;
+        for (int d = 0; d < files[f].dataSize; d++) {
+            linked_files.data[i] = files[f].data[d];
+            i++;
+        }
+    }
+    
+    linked_files.dataSize = i - linked_files.textSize;
+    
+    // let i be used to count the number of symbols
+    i = 0;
+    
+    // iterate through each file's symbol table, and add it to the combined data
+    // and while updating the offsets
+    for (int f = 0; f < num_files; f++) {
+        for (int s = 0; s < files[f].symbolTableSize; s++) {
+            linked_files.symTable[i] = files[f].symbolTable[s];
+            i++;
+        }
+    }
+    
+    linked_files.symTableSize = i;
+    
+    // let i ibe used to count the number of relocations
+    i = 0;
+    
+    // iterate through each file's relocation table, and add it to the combined data
+    for (int f = 0; f < num_files; f++) {
+        for (int r = 0; r < files[f].relocationTableSize; r++) {
+            linked_files.relocTable[i] = files[f].relocTable[r];
+            i++;
+        }
+    }
+    
+    linked_files.relocTableSize = i;
+    
+    
+    // for testing
+    print_symbols(linked_files);
+    print_relocation(linked_files);
+    return linked_files;
+}
+
+void print_symbols(struct CombinedFiles combined) {
+    printf("\n\n");
+    printf("PRINTING ALL SYMBOLS FROM LINKED FILES\n");
+    printf("numSymbols = %d\n", combined.symTableSize);
+    
+    for (int i = 0; i < combined.symTableSize; i++) {
+        printf("%s ", combined.symTable[i].label);
+        printf("%c ", combined.symTable[i].location);
+        printf("%d\n", combined.symTable[i].offset);
+    }
+    printf("\n\n");
+}
+
+void print_relocation(struct CombinedFiles combined) {
+    printf("PRINTING RELOCATION TABLE FROM LINKED FILES\n");
+    printf("relocation table size = %d\n", combined.relocTableSize);
+    
+    for (int i = 0; i < combined.relocTableSize; i++) {
+        printf("FILE: %d,     ", combined.relocTable[i].file);
+
+        printf("%d ", combined.relocTable[i].offset);
+        printf("%s ", combined.relocTable[i].inst);
+        printf("%s\n", combined.relocTable[i].label);
+    }
+    printf("\n\n");
+}
+
