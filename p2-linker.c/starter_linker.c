@@ -59,8 +59,13 @@ int resolve_local(int curr_file, int num_files, struct FileData files[]);
 //int resolve_global();
 
 CombinedFiles combined_init(struct FileData files[], const int num_files);
+
+// for testing
 void print_symbols(struct CombinedFiles combined);
 void print_relocation(struct CombinedFiles combined);
+void print_text(struct CombinedFiles combined);
+void print_data(struct CombinedFiles combined);
+void print_starting_lines(struct FileData files[], int num_files);
 
 
 int main(int argc, char *argv[])
@@ -227,7 +232,7 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     
     struct CombinedFiles linked_files;
     
-    // used as a counter for total text and data lines in all files
+    // used as a counter for total text lines in all files
     int i = 0;
     
     // iterate through each file's text, and add it to the combined text
@@ -242,17 +247,19 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     
     linked_files.textSize = i;
     
+    // let i be used as a counter for total data lines in all files
+    i = 0;
     // iterate through each file's data, and add it to the combined data
     for (int f = 0; f < num_files; f++) {
         // also initialize the start of each file's data section for logic later
-        files[f].dataStartingLine = i;
+        files[f].dataStartingLine = i + linked_files.textSize;
         for (int d = 0; d < files[f].dataSize; d++) {
             linked_files.data[i] = files[f].data[d];
             i++;
         }
     }
     
-    linked_files.dataSize = i - linked_files.textSize;
+    linked_files.dataSize = i;
     
     // let i be used to count the number of symbols
     i = 0;
@@ -283,9 +290,36 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     
     
     // for testing
+    print_text(linked_files);
+    print_data(linked_files);
     print_symbols(linked_files);
     print_relocation(linked_files);
+    print_starting_lines(files, num_files);
     return linked_files;
+}
+
+
+
+void print_text(struct CombinedFiles combined) {
+    printf("PRINTING LINKED TEXT\n");
+    printf("text size = %d\n", combined.textSize);
+    
+    for (int i = 0; i < combined.textSize; i++) {
+        printf("%d\n", combined.text[i]);
+    }
+    
+    printf("\n\n");
+}
+
+void print_data(struct CombinedFiles combined) {
+    printf("PRINTING LINKED DATA\n");
+    printf("data size = %d\n", combined.dataSize);
+    
+    for (int i = 0; i < combined.dataSize; i++) {
+        printf("%d\n", combined.data[i]);
+    }
+    
+    printf("\n\n");
 }
 
 void print_symbols(struct CombinedFiles combined) {
@@ -315,3 +349,15 @@ void print_relocation(struct CombinedFiles combined) {
     printf("\n\n");
 }
 
+void print_starting_lines(struct FileData files[], int num_files) {
+    printf("PRINTING STARTING LINES\n");
+    
+    for (int i = 0; i < num_files; i++) {
+        printf("FILE %d, ", i);
+        printf("TEXT STARTING LINE: %d\n", files[i].textStartingLine);
+    }
+    for (int i = 0; i < num_files; i++) {
+        printf("FILE %d, ", i);
+        printf("DATA STARTING LINE: %d\n", files[i].dataStartingLine);
+    }
+}
