@@ -67,6 +67,11 @@ void print_text(struct CombinedFiles combined);
 void print_data(struct CombinedFiles combined);
 void print_starting_lines(struct FileData files[], int num_files);
 
+void parse_linked_files(CombinedFiles *, struct FileData files[], int num_files);
+
+void final_output(struct CombinedFiles combined, FILE *outFilePtr);
+
+bool is_data(struct CombinedFiles combined, int line_number, int file_text_size, bool fill);
 
 int main(int argc, char *argv[])
 {
@@ -166,41 +171,10 @@ int main(int argc, char *argv[])
     const int num_files = argc - 2;
     struct CombinedFiles linked_files = combined_init(files, num_files);
     
-//    for (int f = 0; f < num_files; f++) {
-//
-//        // iterate through each line in text section
-//        for (int t = 0; t < files[f].textSize; t++) {
-//            bool resolve = false;
-//
-//            // check the relocation table to see if it is a line that needs to be resolved
-//            for (int r = 0; r < files[f].relocationTableSize; r++) {
-//                if (files[f].relocTable[r].offset == t) {
-//                    resolve = true;
-//                    break;
-//                }
-//            }
-//
-//            // if this line was in the relocation table, we need to resolve the offset
-//            if (resolve) {
-//
-//                // local labels
-//                if (!isupper(files[f].relocTable[t].label[0])) {
-//                    int new_offset = resolve_local(f, num_files, files);
-//                    // output original text + new offset
-//                    fprintf(outFilePtr, "%d\n", files[f].text[t] + new_offset);
-//                }
-//
-//                // global labels
-//                else {
-//
-//                }
-//            }
-//
-//            else {
-//                fprintf(outFilePtr, "%d\n", files[f].text[t]);
-//            }
-//        }
-//    }
+    parse_linked_files(&linked_files, files, num_files);
+    
+    // output text + data from resolved linked files
+    final_output(linked_files, outFilePtr);
 
 } // main
 
@@ -252,7 +226,7 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     // iterate through each file's data, and add it to the combined data
     for (int f = 0; f < num_files; f++) {
         // also initialize the start of each file's data section for logic later
-        files[f].dataStartingLine = i + linked_files.textSize;
+        files[f].dataStartingLine = i;
         for (int d = 0; d < files[f].dataSize; d++) {
             linked_files.data[i] = files[f].data[d];
             i++;
@@ -298,7 +272,90 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     return linked_files;
 }
 
+void parse_linked_files(CombinedFiles *combined, struct FileData files[], int num_files) {
+    
+    int line_number = 0;
+    bool fill;
+    int new_offset;
+    // need to resolve everything in relocation table
+    for (int r = 0; r < combined->relocTableSize; r++) {
+        // if it is not a .fill, the line we need to resolve is in the text section
+        if (strcmp(combined->relocTable[r].label, ".fill")) {
+            line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
+            fill = false;
+            
+            int file_text_size = files[combined->relocTable[r].file].textSize;
+            bool isData = is_data(*combined, line_number, file_text_size, fill);
+            
+            
+            // resolve labels that are declared in data section
+            if (isData) {
+                new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
+                combined->text[line_number] += new_offset;
+                
+            }
+            
+            // resolve labels that are declared in text section
+            else {
+                combined->text[line_number] += files[combined->relocTable[r].file].textStartingLine;
+            }
+            
+        }
+        
+        // .fill, we need to resolve data section
+        else {
+            line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
+            fill = true;
+            
+            int file_text_size = files[combined->relocTable[r].file].textSize;
+            bool isData = is_data(*combined, line_number, file_text_size, fill);
+            
+            
+            // resolve labels that are declared in data section
+            if (isData) {
+                new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
+                combined->data[line_number] += new_offset;
+                
+            }
+            
+            // resolve labels that are declared in text section
+            else {
+                combined->data[line_number] += files[combined->relocTable[r].file].textStartingLine;
+            }
+        }
+    }
+}
 
+
+
+
+
+
+
+
+
+bool is_data(struct CombinedFiles combined, int line_number, int file_text_size, bool fill) {
+    
+    int offset;
+    
+    // label is used in the text section
+    if (!fill) {
+        offset = combined.text[line_number] & 0xFFFF;
+    }
+    
+    // label is used in the data section
+    else {
+        offset = combined.data[line_number] & 0xFFFF;
+    }
+    
+    // label is declared in data section
+    if (offset >= file_text_size) {
+        return true;
+    }
+    
+    // label is declared in text section
+    return false;
+}
 
 void print_text(struct CombinedFiles combined) {
     printf("PRINTING LINKED TEXT\n");
@@ -359,5 +416,15 @@ void print_starting_lines(struct FileData files[], int num_files) {
     for (int i = 0; i < num_files; i++) {
         printf("FILE %d, ", i);
         printf("DATA STARTING LINE: %d\n", files[i].dataStartingLine);
+    }
+}
+
+void final_output(struct CombinedFiles combined, FILE *outFilePtr) {
+    for (int t = 0; t < combined.textSize; t++) {
+        fprintf(outFilePtr, "%d\n", combined.text[t]);
+    }
+    
+    for (int d = 0; d < combined.dataSize; d++) {
+        fprintf(outFilePtr, "%d\n", combined.data[d]);
     }
 }

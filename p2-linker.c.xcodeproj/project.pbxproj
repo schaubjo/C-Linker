@@ -33,6 +33,8 @@
 		294E6EE529AACAC50058FF5E /* main.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; path = main.as; sourceTree = "<group>"; };
 		294E6EE629AACAC50058FF5E /* subone.as */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; path = subone.as; sourceTree = "<group>"; };
 		294E6EE729AACAC50058FF5E /* starter_linker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = starter_linker.c; sourceTree = "<group>"; };
+		294E6EEA29AE4CEC0058FF5E /* local1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = local1; sourceTree = "<group>"; };
+		294E6EEB29AE4CF50058FF5E /* local2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = local2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,8 @@
 				294E6EE129AACAC50058FF5E /* Makefile */,
 				294E6EE629AACAC50058FF5E /* subone.as */,
 				294E6EE329AACAC50058FF5E /* subone.obj.correct */,
+				294E6EEA29AE4CEC0058FF5E /* local1 */,
+				294E6EEB29AE4CF50058FF5E /* local2 */,
 				294E6EE029AAC5CD0058FF5E /* output */,
 			);
 			path = "p2-linker.c";

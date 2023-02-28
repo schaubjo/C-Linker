@@ -108,6 +108,142 @@
 			<key>uniqueIdentifier</key>
 			<string>0B61F5E5-E0AB-43D4-B133-E7BFEA08C718</string>
 		</dict>
+		<key>0B6416AD-8FF2-42F6-B584-5687501F36FB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0B6416AD-8FF2-42F6-B584-5687501F36FB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699293307.06783402</real>
+			<key>timeStoppedRecording</key>
+			<real>699293307.88136804</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>0B6416AD-8FF2-42F6-B584-5687501F36FB</string>
+		</dict>
+		<key>0EC19321-149D-49AD-BD60-A3E3AD444752</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0EC19321-149D-49AD-BD60-A3E3AD444752.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699286631.34443295</real>
+			<key>timeStoppedRecording</key>
+			<real>699286640.29576898</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>0EC19321-149D-49AD-BD60-A3E3AD444752</string>
+		</dict>
+		<key>11B4F819-A8A5-4895-950D-06FCBEBA1B58</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>11B4F819-A8A5-4895-950D-06FCBEBA1B58.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699293290.74581802</real>
+			<key>timeStoppedRecording</key>
+			<real>699293297.97616196</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>11B4F819-A8A5-4895-950D-06FCBEBA1B58</string>
+		</dict>
+		<key>122C4079-385E-47F3-BC62-541FA061620D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>122C4079-385E-47F3-BC62-541FA061620D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287310.46233499</real>
+			<key>timeStoppedRecording</key>
+			<real>699287314.43608499</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>122C4079-385E-47F3-BC62-541FA061620D</string>
+		</dict>
 		<key>15E33F03-CCD9-4819-A528-CE536D410699</key>
 		<dict>
 			<key>className</key>
@@ -141,6 +277,40 @@
 			<string>Run p2-linker</string>
 			<key>uniqueIdentifier</key>
 			<string>15E33F03-CCD9-4819-A528-CE536D410699</string>
+		</dict>
+		<key>1B82A08E-8845-470B-BACA-456F3F09B9DA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1B82A08E-8845-470B-BACA-456F3F09B9DA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287470.562603</real>
+			<key>timeStoppedRecording</key>
+			<real>699287471.50615394</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>1B82A08E-8845-470B-BACA-456F3F09B9DA</string>
 		</dict>
 		<key>2F3236FD-F026-41BD-9EA7-EF6EAA35AD36</key>
 		<dict>
@@ -176,6 +346,74 @@
 			<key>uniqueIdentifier</key>
 			<string>2F3236FD-F026-41BD-9EA7-EF6EAA35AD36</string>
 		</dict>
+		<key>3AADE4F1-2074-49FE-8963-7D6B2445DDA5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3AADE4F1-2074-49FE-8963-7D6B2445DDA5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287356.983531</real>
+			<key>timeStoppedRecording</key>
+			<real>699287390.08671796</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>3AADE4F1-2074-49FE-8963-7D6B2445DDA5</string>
+		</dict>
+		<key>3E083AD0-4F3C-4950-BB6A-59E90F2B6AC7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3E083AD0-4F3C-4950-BB6A-59E90F2B6AC7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699286646.89157701</real>
+			<key>timeStoppedRecording</key>
+			<real>699287239.19643104</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>3E083AD0-4F3C-4950-BB6A-59E90F2B6AC7</string>
+		</dict>
 		<key>3F323F38-0B15-4303-9EC4-B422A43BB79E</key>
 		<dict>
 			<key>className</key>
@@ -209,6 +447,40 @@
 			<string>Run p2-linker</string>
 			<key>uniqueIdentifier</key>
 			<string>3F323F38-0B15-4303-9EC4-B422A43BB79E</string>
+		</dict>
+		<key>4032BAF4-A111-40B9-B833-EA3F763D2523</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4032BAF4-A111-40B9-B833-EA3F763D2523.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287414.33530998</real>
+			<key>timeStoppedRecording</key>
+			<real>699287417.18942499</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>4032BAF4-A111-40B9-B833-EA3F763D2523</string>
 		</dict>
 		<key>44088570-D9E4-4312-A2BE-8C5CB5F5454A</key>
 		<dict>
@@ -380,6 +652,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5802B4FD-4877-4312-819A-283C751C7C33</string>
 		</dict>
+		<key>673C2048-2678-44BB-8321-B680DB72AA39</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>673C2048-2678-44BB-8321-B680DB72AA39.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287420.33405101</real>
+			<key>timeStoppedRecording</key>
+			<real>699287468.60756004</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>673C2048-2678-44BB-8321-B680DB72AA39</string>
+		</dict>
 		<key>785A68EC-AEDD-490A-9B09-CD04F44C01EC</key>
 		<dict>
 			<key>className</key>
@@ -516,6 +822,74 @@
 			<key>uniqueIdentifier</key>
 			<string>85EACDC7-C2D0-45BE-87CD-2A6CB44C3F31</string>
 		</dict>
+		<key>97FB83B3-01ED-4DFA-AA9C-EF759663C4FC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>97FB83B3-01ED-4DFA-AA9C-EF759663C4FC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287316.48639798</real>
+			<key>timeStoppedRecording</key>
+			<real>699287317.39422798</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>97FB83B3-01ED-4DFA-AA9C-EF759663C4FC</string>
+		</dict>
+		<key>9C7E62F9-9B97-4C21-8C3F-691C4E491029</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9C7E62F9-9B97-4C21-8C3F-691C4E491029.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699291505.14144504</real>
+			<key>timeStoppedRecording</key>
+			<real>699291536.06879497</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>9C7E62F9-9B97-4C21-8C3F-691C4E491029</string>
+		</dict>
 		<key>A3643400-81AA-498C-8FC4-68F12E558A30</key>
 		<dict>
 			<key>className</key>
@@ -549,6 +923,108 @@
 			<string>Run p2-linker</string>
 			<key>uniqueIdentifier</key>
 			<string>A3643400-81AA-498C-8FC4-68F12E558A30</string>
+		</dict>
+		<key>BA215A5E-0E49-42BB-8275-67FAAADDCA10</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BA215A5E-0E49-42BB-8275-67FAAADDCA10.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699286462.67656696</real>
+			<key>timeStoppedRecording</key>
+			<real>699286464.50091696</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>BA215A5E-0E49-42BB-8275-67FAAADDCA10</string>
+		</dict>
+		<key>C02C7CB3-99EF-4CE3-BA26-44D9A0F2CC78</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C02C7CB3-99EF-4CE3-BA26-44D9A0F2CC78.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699286578.48724103</real>
+			<key>timeStoppedRecording</key>
+			<real>699286580.29079294</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>C02C7CB3-99EF-4CE3-BA26-44D9A0F2CC78</string>
+		</dict>
+		<key>C1AAB296-C8B4-499B-8080-C55A154769D4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C1AAB296-C8B4-499B-8080-C55A154769D4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699287980.93242097</real>
+			<key>timeStoppedRecording</key>
+			<real>699287988.38752496</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>C1AAB296-C8B4-499B-8080-C55A154769D4</string>
 		</dict>
 		<key>C3457DF9-E1F9-4D69-A005-3BC54733E51A</key>
 		<dict>
@@ -719,6 +1195,40 @@
 			<string>Run p2-linker</string>
 			<key>uniqueIdentifier</key>
 			<string>DAFE3376-D1B6-4C66-8178-53DD9BFEDBD5</string>
+		</dict>
+		<key>DD8DDFB1-45B4-4A7A-9270-CFF1BB4530D5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DD8DDFB1-45B4-4A7A-9270-CFF1BB4530D5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run p2-linker</string>
+			<key>timeStartedRecording</key>
+			<real>699286367.96182299</real>
+			<key>timeStoppedRecording</key>
+			<real>699286375.01828301</real>
+			<key>title</key>
+			<string>Run p2-linker</string>
+			<key>uniqueIdentifier</key>
+			<string>DD8DDFB1-45B4-4A7A-9270-CFF1BB4530D5</string>
 		</dict>
 		<key>E3619001-68BD-45C6-9AF5-E86D22B392C3</key>
 		<dict>
