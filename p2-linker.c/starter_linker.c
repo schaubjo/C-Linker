@@ -56,6 +56,8 @@ struct CombinedFiles {
 };
 
 CombinedFiles combined_init(struct FileData files[], const int num_files);
+void create_symbol_table(CombinedFiles *, struct FileData files[], const int num_files);
+bool error_duplicate_definition(CombinedFiles *, struct FileData files[], int curr_size, char *label);
 
 // for testing
 void print_symbols(struct CombinedFiles combined);
@@ -66,6 +68,7 @@ void print_starting_lines(struct FileData files[], int num_files);
 
 void parse_linked_files(CombinedFiles *, struct FileData files[], int num_files);
 void resolve_local(CombinedFiles *, struct FileData files[], int r);
+void resolve_global(CombinedFiles *, struct FileData files[], int r);
 
 void final_output(struct CombinedFiles combined, FILE *outFilePtr);
 
@@ -210,21 +213,23 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     
     linked_files.dataSize = i;
     
-    // let i be used to count the number of symbols
-    i = 0;
+//    // let i be used to count the number of symbols
+//    i = 0;
+//
+//    // TODO: symbols
+//    // iterate through each file's symbol table, and add it to the combined data
+//    // and while updating the offsets
+//    for (int f = 0; f < num_files; f++) {
+//        for (int s = 0; s < files[f].symbolTableSize; s++) {
+//            linked_files.symTable[i] = files[f].symbolTable[s];
+//            i++;
+//        }
+//    }
+//
+//    linked_files.symTableSize = i;
+    create_symbol_table(&linked_files, files, num_files);
     
-    // iterate through each file's symbol table, and add it to the combined data
-    // and while updating the offsets
-    for (int f = 0; f < num_files; f++) {
-        for (int s = 0; s < files[f].symbolTableSize; s++) {
-            linked_files.symTable[i] = files[f].symbolTable[s];
-            i++;
-        }
-    }
-    
-    linked_files.symTableSize = i;
-    
-    // let i ibe used to count the number of relocations
+    // let i be used to count the number of relocations
     i = 0;
     
     // iterate through each file's relocation table, and add it to the combined data
@@ -247,6 +252,59 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
     return linked_files;
 }
 
+void create_symbol_table(CombinedFiles *combined, struct FileData files[], const int num_files) {
+    
+    // current size of new symbol table
+    int i = 0;
+    // iterate through each file's symbol table
+    for (int f = 0; f < num_files; f++) {
+        for (int s = 0; s < files[f].symbolTableSize; s++) {
+            
+            // check that there isn't a label definition for this already
+            if (files[f].symbolTable[s].location != 'U') {
+                if (error_duplicate_definition(combined, files, i, files[f].symbolTable[s].label)) {
+                    exit(1);
+                }
+            }
+            
+            // if symbol was in the data section of the original file
+            if (files[f].symbolTable[s].location == 'D') {
+                // we want to add the entire combined text size + any previous data sections
+                int combined_text_size = combined->textSize;
+                int previous_data_size = files[f].dataStartingLine;
+                
+                files[f].symbolTable[s].offset += combined_text_size +previous_data_size;
+                combined->symTable[i] = files[f].symbolTable[s];
+                i++;
+            }
+            
+            // if symbol was in the text section of the original file
+            else if (files[f].symbolTable[s].location == 'T') {
+                // we want to just add the previous text sections
+                int previous_text_size = files[f].textStartingLine;
+                
+                files[f].symbolTable[s].offset += previous_text_size;
+                combined->symTable[i] = files[f].symbolTable[s];
+                i++;
+            }
+        } // for s
+    } // for f
+    
+    // initialize linked symbol table size
+    combined->symTableSize = i;
+}
+
+bool error_duplicate_definition(CombinedFiles *combined, struct FileData files[], int curr_size, char *label) {
+    
+    // iterate through current linked symbol table and return true if a label definition is already present
+    for (int s = 0; s < curr_size; s++) {
+        if (!strcmp(label, combined->symTable[s].label)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void parse_linked_files(CombinedFiles *combined, struct FileData files[], int num_files) {
     
     // need to resolve everything in relocation table
@@ -259,10 +317,26 @@ void parse_linked_files(CombinedFiles *combined, struct FileData files[], int nu
         
         // global label needs to be resolved
         else {
+            resolve_global(combined, files, r);
+        }
+    }
+}
+
+
+void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
+    int line_number;
+    int new_offset;
+    bool fill;
+    
+    // look for where the label is defined in the symbol table
+    for (int s = 0; s < combined->symTableSize; s++) {
+        if (!strcmp(combined->relocTable[r].label, combined->symTable[s].label) &&
+            (combined->symTable[s].location == 'D' || combined->symTable[s].location == 'T')) {
             
         }
     }
 }
+
 
 void resolve_local(CombinedFiles *combined, struct FileData files[], int r) {
     

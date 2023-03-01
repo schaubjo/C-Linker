@@ -1400,6 +1400,40 @@
 			<key>uniqueIdentifier</key>
 			<string>ACBDCC11-CDBD-46FB-A7FD-BE73DDA64797</string>
 		</dict>
+		<key>AE5E1809-2752-4A33-9302-E329068885B4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AE5E1809-2752-4A33-9302-E329068885B4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699384981.02767205</real>
+			<key>timeStoppedRecording</key>
+			<real>699384981.16697097</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>AE5E1809-2752-4A33-9302-E329068885B4</string>
+		</dict>
 		<key>B5247D3E-B51D-430E-BA13-BC0B2D6495B7</key>
 		<dict>
 			<key>className</key>
@@ -1603,6 +1637,40 @@
 			<string>Build p2-linker.c</string>
 			<key>uniqueIdentifier</key>
 			<string>C70D84CC-604F-4885-A0B6-BF244AFE716B</string>
+		</dict>
+		<key>C8A183F1-209C-47AA-B01D-0472A78029F8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8A183F1-209C-47AA-B01D-0472A78029F8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699384937.68027997</real>
+			<key>timeStoppedRecording</key>
+			<real>699384938.01090598</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>C8A183F1-209C-47AA-B01D-0472A78029F8</string>
 		</dict>
 		<key>D5F0E96C-A1CA-4998-A093-028A24881D46</key>
 		<dict>
