@@ -55,9 +55,6 @@ struct CombinedFiles {
 	int relocTableSize;
 };
 
-int resolve_local(int curr_file, int num_files, struct FileData files[]);
-//int resolve_global();
-
 CombinedFiles combined_init(struct FileData files[], const int num_files);
 
 // for testing
@@ -68,6 +65,7 @@ void print_data(struct CombinedFiles combined);
 void print_starting_lines(struct FileData files[], int num_files);
 
 void parse_linked_files(CombinedFiles *, struct FileData files[], int num_files);
+void resolve_local(CombinedFiles *, struct FileData files[], int r);
 
 void final_output(struct CombinedFiles combined, FILE *outFilePtr);
 
@@ -178,29 +176,6 @@ int main(int argc, char *argv[])
 
 } // main
 
-int resolve_local(int curr_file, int num_files, struct FileData files[]) {
-    
-    // resolve local labels that have to point to data section within its own file
-    
-    // add up the number of text lines before the current text file
-    int before_text = 0;
-    for (int b = 0; b < curr_file; b++) {
-        before_text += files[b].textSize;
-    }
-    
-    // add up the number of text lines after the current text file
-    int after_text = 0;
-    for (int a = curr_file + 1; a < num_files; a++) {
-        after_text += files[a].textSize;
-    }
-    
-    // add the number of data lines before the current file's data section
-    int before_data = 0;
-    for (int d = 0; d < curr_file; d++) {
-        before_data += files[d].dataSize;
-    }
-    return before_text + after_text + before_data;
-}
 
 CombinedFiles combined_init(struct FileData files[], const int num_files) {
     
@@ -274,58 +249,73 @@ CombinedFiles combined_init(struct FileData files[], const int num_files) {
 
 void parse_linked_files(CombinedFiles *combined, struct FileData files[], int num_files) {
     
-    int line_number = 0;
-    bool fill;
-    int new_offset;
     // need to resolve everything in relocation table
     for (int r = 0; r < combined->relocTableSize; r++) {
-        // if it is not a .fill, the line we need to resolve is in the text section
-        if (strcmp(combined->relocTable[r].label, ".fill")) {
-            line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
-            fill = false;
-            
-            int file_text_size = files[combined->relocTable[r].file].textSize;
-            bool isData = is_data(*combined, line_number, file_text_size, fill);
-            
-            
-            // resolve labels that are declared in data section
-            if (isData) {
-                new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
-                combined->text[line_number] += new_offset;
-                
-            }
-            
-            // resolve labels that are declared in text section
-            else {
-                combined->text[line_number] += files[combined->relocTable[r].file].textStartingLine;
-            }
-            
+
+        // local label needs to be resolved
+        if (!isupper(combined->relocTable[r].label[0])) {
+            resolve_local(combined, files, r);
         }
         
-        // .fill, we need to resolve data section
+        // global label needs to be resolved
         else {
-            line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
-            fill = true;
             
-            int file_text_size = files[combined->relocTable[r].file].textSize;
-            bool isData = is_data(*combined, line_number, file_text_size, fill);
-            
-            
-            // resolve labels that are declared in data section
-            if (isData) {
-                new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
-                combined->data[line_number] += new_offset;
-                
-            }
-            
-            // resolve labels that are declared in text section
-            else {
-                combined->data[line_number] += files[combined->relocTable[r].file].textStartingLine;
-            }
         }
     }
 }
 
+void resolve_local(CombinedFiles *combined, struct FileData files[], int r) {
+    
+    int line_number;
+    int new_offset;
+    bool fill;
+    
+    // if it is not a .fill, the line we need to resolve is in the text section
+    if (strcmp(combined->relocTable[r].inst, ".fill")) {
+        line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
+        fill = false;
+        
+        int file_text_size = files[combined->relocTable[r].file].textSize;
+        bool isData = is_data(*combined, line_number, file_text_size, fill);
+        
+        
+        // resolve labels that are declared in data section
+        if (isData) {
+            new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
+            combined->text[line_number] += new_offset;
+            
+        }
+        
+        // resolve labels that are declared in text section
+        else {
+            combined->text[line_number] += files[combined->relocTable[r].file].textStartingLine;
+        }
+        
+    }
+    
+    // .fill, we need to resolve data section
+    else {
+        line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
+        fill = true;
+        
+        int file_text_size = files[combined->relocTable[r].file].textSize;
+        bool isData = is_data(*combined, line_number, file_text_size, fill);
+        
+        
+        // resolve labels that are declared in data section
+        if (isData) {
+            new_offset = combined->textSize - file_text_size + files[combined->relocTable[r].file].dataStartingLine;
+            combined->data[line_number] += new_offset;
+            
+        }
+        
+        // resolve labels that are declared in text section
+        else {
+            combined->data[line_number] += files[combined->relocTable[r].file].textStartingLine;
+        }
+    }
+
+}
 
 
 

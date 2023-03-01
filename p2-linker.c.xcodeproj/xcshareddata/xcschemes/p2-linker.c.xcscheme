@@ -54,10 +54,22 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "main.obj.correct"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "subone.obj.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "local1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "local2"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "local3"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
