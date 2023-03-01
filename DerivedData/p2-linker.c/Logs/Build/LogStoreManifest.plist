@@ -1536,6 +1536,40 @@
 			<key>uniqueIdentifier</key>
 			<string>C1B3BCB1-0E4E-44B9-A27C-49C4B6CC4866</string>
 		</dict>
+		<key>C4AAF541-15FF-4904-8919-0F9F347DBE13</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C4AAF541-15FF-4904-8919-0F9F347DBE13.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699386758.00631106</real>
+			<key>timeStoppedRecording</key>
+			<real>699386758.21212399</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>C4AAF541-15FF-4904-8919-0F9F347DBE13</string>
+		</dict>
 		<key>C50D6B55-FB23-4915-BFF9-7AAD7971620F</key>
 		<dict>
 			<key>className</key>

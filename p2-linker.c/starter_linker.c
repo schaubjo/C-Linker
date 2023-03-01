@@ -290,6 +290,7 @@ void create_symbol_table(CombinedFiles *combined, struct FileData files[], const
         } // for s
     } // for f
     
+    // TODO: check for undefined global labels
     // initialize linked symbol table size
     combined->symTableSize = i;
 }
@@ -325,15 +326,25 @@ void parse_linked_files(CombinedFiles *combined, struct FileData files[], int nu
 
 void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
     int line_number;
-    int new_offset;
-    bool fill;
+//    int new_offset;
+//    bool fill;
     
     // look for where the label is defined in the symbol table
     for (int s = 0; s < combined->symTableSize; s++) {
-        if (!strcmp(combined->relocTable[r].label, combined->symTable[s].label) &&
-            (combined->symTable[s].location == 'D' || combined->symTable[s].location == 'T')) {
+        if (!strcmp(combined->relocTable[r].label, combined->symTable[s].label)) {
+            // if it is not .fill, the line will be in the text section
+            if (strcmp(combined->relocTable[r].inst, ".fill")) {
+                line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
+                combined->text[line_number] += combined->symTable[s].offset;
+            }
             
+            // line will be in the data section
+            else {
+                line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
+                combined->data[line_number] += combined->symTable[s].offset;
+            }
         }
+            
     }
 }
 
