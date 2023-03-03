@@ -375,6 +375,9 @@ void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
             if (strcmp(combined->relocTable[r].inst, ".fill")) {
                 line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
                 
+                // zero it out
+                combined->text[line_number] = combined->text[line_number] & 0xFFFF0000;
+                
                 combined->text[line_number] += combined->symTable[s].offset;
             }
             
@@ -382,6 +385,9 @@ void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
             else {
 
                 line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
+                
+                // zero it out
+                combined->data[line_number] = 0;
                 
                 combined->data[line_number] += combined->symTable[s].offset;
             }

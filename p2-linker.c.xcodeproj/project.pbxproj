@@ -50,6 +50,13 @@
 		295B72EC29B15AD400D623DC /* dupeglobal_1.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = dupeglobal_1.correct; sourceTree = "<group>"; };
 		298C907129B174670029074C /* goodstack_0.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = goodstack_0.correct; sourceTree = "<group>"; };
 		298C907229B174720029074C /* goodstack_1.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = goodstack_1.correct; sourceTree = "<group>"; };
+		298C907829B186CF0029074C /* edge_0.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge_0.correct; sourceTree = "<group>"; };
+		298C907929B186D80029074C /* edge_1.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge_1.correct; sourceTree = "<group>"; };
+		298C908129B26C710029074C /* c_0.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = c_0.correct; sourceTree = "<group>"; };
+		298C908229B26C790029074C /* c_1.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = c_1.correct; sourceTree = "<group>"; };
+		298C908329B26C800029074C /* c_2.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = c_2.correct; sourceTree = "<group>"; };
+		298C908929B26E260029074C /* g_0.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = g_0.correct; sourceTree = "<group>"; };
+		298C908A29B26E2D0029074C /* g_1.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = g_1.correct; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +113,13 @@
 				2940FD4429B1684900FBAA59 /* defstack_0.correct */,
 				298C907129B174670029074C /* goodstack_0.correct */,
 				298C907229B174720029074C /* goodstack_1.correct */,
+				298C907829B186CF0029074C /* edge_0.correct */,
+				298C907929B186D80029074C /* edge_1.correct */,
+				298C908129B26C710029074C /* c_0.correct */,
+				298C908229B26C790029074C /* c_1.correct */,
+				298C908329B26C800029074C /* c_2.correct */,
+				298C908929B26E260029074C /* g_0.correct */,
+				298C908A29B26E2D0029074C /* g_1.correct */,
 				294E6EE029AAC5CD0058FF5E /* output */,
 			);
 			path = "p2-linker.c";

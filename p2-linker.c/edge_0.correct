@@ -1,0 +1,20 @@
+5 4 4 6
+8454149
+13762562
+10223621
+13762563
+8519686
+5
+2
+8
+2
+Test T 2
+Equal T 3
+Dat0 D 1
+Next D 3
+0 lw five
+1 sw Test
+3 sw Equal
+4 lw Dat0
+2 .fill Next
+3 .fill Test

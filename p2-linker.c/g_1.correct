@@ -1,0 +1,51 @@
+15 7 10 18
+655363
+8454144
+12713999
+655363
+8585216
+12845056
+8978432
+13762560
+8454153
+12714002
+8454144
+12713984
+8454152
+12714001
+25165824
+5
+0
+16
+0
+0
+0
+0
+Aruh D 5
+Bruh D 6
+Aone U 0
+Bone U 0
+Hone U 0
+Cone U 0
+Gone U 0
+Fone U 0
+Ione U 0
+Eone U 0
+1 lw start
+2 sw five
+4 lw Aone
+5 sw Bone
+6 lw Hone
+7 sw Cone
+8 lw bone
+9 sw three
+10 lw Gone
+11 sw Fone
+12 lw aone
+13 sw two
+1 .fill start
+2 .fill one
+3 .fill Gone
+4 .fill Bone
+5 .fill Ione
+6 .fill Eone

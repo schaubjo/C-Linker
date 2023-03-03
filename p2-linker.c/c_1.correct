@@ -1,0 +1,16 @@
+4 5 1 5
+8454148
+8519685
+1835013
+24576000
+1
+2
+0
+2
+5
+BAdd D 2
+0 lw one
+1 lw two
+2 .fill test2
+3 .fill four
+4 .fill two

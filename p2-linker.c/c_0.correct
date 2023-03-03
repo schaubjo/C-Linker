@@ -1,0 +1,50 @@
+21 8 4 16
+8454166
+13828096
+2424836
+16187392
+655363
+8650755
+8716312
+1245185
+8650752
+25034752
+8716309
+3604481
+8519680
+2293763
+8716310
+655363
+8650752
+25034752
+8716309
+3604481
+24576000
+-1
+1
+10
+2
+0
+22
+25
+3
+Bruh T 10
+Add3r D 4
+Stack U 0
+BAdd U 0
+0 lw one
+1 sw Stack
+3 sw Stack
+5 lw five
+6 lw two
+8 lw BAdd
+10 lw mOne
+12 lw Stack
+14 lw one
+16 lw BAdd
+18 lw mOne
+2 .fill Bruh
+4 .fill test1
+5 .fill one
+6 .fill Add3r
+7 .fill five
