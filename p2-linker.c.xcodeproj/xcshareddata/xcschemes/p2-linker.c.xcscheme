@@ -54,22 +54,58 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "main.obj.correct"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "subone.obj.correct"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "local1"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "local2"
+            argument = "local_0.correct"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "local3"
+            argument = "local_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "local_2.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "global_0.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "global_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "dupeglobal_0.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "dupeglobal_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "globaldupe_0.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "globaldupe_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "undef_0.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "notdef_0.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "defstack_0.correct"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument

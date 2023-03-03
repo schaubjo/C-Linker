@@ -1,0 +1,15 @@
+2 3 6 3
+8454144
+14417920
+5
+7
+0
+Txt2 T 1
+Five D 0
+Seven D 1
+Six U 0
+Txt1 U 0
+Eight U 0
+0 lw Six
+1 sw Txt1
+2 .fill Eight

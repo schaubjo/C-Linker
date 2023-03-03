@@ -58,6 +58,7 @@ struct CombinedFiles {
 CombinedFiles combined_init(struct FileData files[], const int num_files);
 void create_symbol_table(CombinedFiles *, struct FileData files[], const int num_files);
 bool error_duplicate_definition(CombinedFiles *, struct FileData files[], int curr_size, char *label);
+void stack_error(CombinedFiles *);
 
 // for testing
 void print_symbols(struct CombinedFiles combined);
@@ -290,10 +291,21 @@ void create_symbol_table(CombinedFiles *combined, struct FileData files[], const
         } // for s
     } // for f
     
-    // TODO: check for undefined global labels
     // initialize linked symbol table size
     combined->symTableSize = i;
+    
+    // check that stack is not defined
+    stack_error(combined);
 }
+
+void stack_error(CombinedFiles *combined) {
+    for (int s = 0; s < combined->symTableSize; s++) {
+        if (!strcmp(combined->symTable[s].label, "Stack")) {
+            exit(1);
+        }
+    }
+}
+
 
 bool error_duplicate_definition(CombinedFiles *combined, struct FileData files[], int curr_size, char *label) {
     
@@ -305,6 +317,8 @@ bool error_duplicate_definition(CombinedFiles *combined, struct FileData files[]
     }
     return false;
 }
+
+
 
 void parse_linked_files(CombinedFiles *combined, struct FileData files[], int num_files) {
     
@@ -335,17 +349,39 @@ void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
             // if it is not .fill, the line will be in the text section
             if (strcmp(combined->relocTable[r].inst, ".fill")) {
                 line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
-                combined->text[line_number] += combined->symTable[s].offset;
+                
+                // if it is stack, just add text + data sizes
+                if (!strcmp(combined->symTable[s].label, "Stack")) {
+                    combined->text[line_number] += combined->textSize + combined->dataSize;
+                }
+                
+                // normal non-stack global label
+                else {
+                    combined->text[line_number] += combined->symTable[s].offset;
+                }
             }
             
             // line will be in the data section
             else {
+
                 line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
-                combined->data[line_number] += combined->symTable[s].offset;
+                // if it is stack, just add text + data sizes
+                if (!strcmp(combined->symTable[s].label, "Stack")) {
+                    combined->data[line_number] += combined->textSize + combined->dataSize;
+                }
+                
+                // normal non-stack global label
+                else {
+                    combined->data[line_number] += combined->symTable[s].offset;
+                }
             }
-        }
             
+            return;
+        }
     }
+    
+    // label definition was not found, return error
+    exit(1);
 }
 
 
