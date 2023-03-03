@@ -58,7 +58,7 @@ struct CombinedFiles {
 CombinedFiles combined_init(struct FileData files[], const int num_files);
 void create_symbol_table(CombinedFiles *, struct FileData files[], const int num_files);
 bool error_duplicate_definition(CombinedFiles *, struct FileData files[], int curr_size, char *label);
-void stack_error(CombinedFiles *);
+void stack_error(CombinedFiles *, struct FileData files[], const int num_files);
 
 // for testing
 void print_symbols(struct CombinedFiles combined);
@@ -295,18 +295,25 @@ void create_symbol_table(CombinedFiles *combined, struct FileData files[], const
     combined->symTableSize = i;
     
     // check that stack is not defined
-    stack_error(combined);
+    stack_error(combined, files, num_files);
 }
 
-void stack_error(CombinedFiles *combined) {
-    for (int s = 0; s < combined->symTableSize; s++) {
-        if (!strcmp(combined->symTable[s].label, "Stack")) {
-            exit(1);
+void stack_error(CombinedFiles *combined, struct FileData files[], const int num_files) {
+    for (int f = 0; f < num_files; f++) {
+        for (int s = 0; s < files[f].symbolTableSize; s++) {
+            if (!strcmp(files[f].symbolTable[s].label, "Stack") && files[f].symbolTable[s].location != 'U') {
+                exit(1);
+            }
         }
     }
+//    for (int s = 0; s < combined->symTableSize; s++) {
+//        if (!strcmp(combined->symTable[s].label, "Stack") && combined->symTable[s].location != 'U') {
+//            exit(1);
+//        }
+//    }
 }
 
-
+// TODO: fix
 bool error_duplicate_definition(CombinedFiles *combined, struct FileData files[], int curr_size, char *label) {
     
     // iterate through current linked symbol table and return true if a label definition is already present
@@ -343,6 +350,24 @@ void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
 //    int new_offset;
 //    bool fill;
     
+    
+    // STACK
+    if (!strcmp(combined->relocTable[r].label, "Stack")) {
+        // figure out the line number depending if it is in text or data
+        
+        // text line
+        if (strcmp(combined->relocTable[r].inst, ".fill")) {
+            int line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
+            combined->text[line_number] += combined->textSize + combined->dataSize;
+        }
+        
+        // data line
+        else {
+            int line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
+            combined->data[line_number] += combined->textSize + combined->dataSize;
+        }
+        return;
+    }
     // look for where the label is defined in the symbol table
     for (int s = 0; s < combined->symTableSize; s++) {
         if (!strcmp(combined->relocTable[r].label, combined->symTable[s].label)) {
@@ -350,30 +375,15 @@ void resolve_global(CombinedFiles *combined, struct FileData files[], int r) {
             if (strcmp(combined->relocTable[r].inst, ".fill")) {
                 line_number = files[combined->relocTable[r].file].textStartingLine + combined->relocTable[r].offset;
                 
-                // if it is stack, just add text + data sizes
-                if (!strcmp(combined->symTable[s].label, "Stack")) {
-                    combined->text[line_number] += combined->textSize + combined->dataSize;
-                }
-                
-                // normal non-stack global label
-                else {
-                    combined->text[line_number] += combined->symTable[s].offset;
-                }
+                combined->text[line_number] += combined->symTable[s].offset;
             }
             
             // line will be in the data section
             else {
 
                 line_number = files[combined->relocTable[r].file].dataStartingLine + combined->relocTable[r].offset;
-                // if it is stack, just add text + data sizes
-                if (!strcmp(combined->symTable[s].label, "Stack")) {
-                    combined->data[line_number] += combined->textSize + combined->dataSize;
-                }
                 
-                // normal non-stack global label
-                else {
-                    combined->data[line_number] += combined->symTable[s].offset;
-                }
+                combined->data[line_number] += combined->symTable[s].offset;
             }
             
             return;

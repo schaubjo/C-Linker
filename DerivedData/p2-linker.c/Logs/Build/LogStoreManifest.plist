@@ -6,6 +6,176 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>34A95094-86F7-4726-BEAD-24F0F051DA03</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>34A95094-86F7-4726-BEAD-24F0F051DA03.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496156.15997899</real>
+			<key>timeStoppedRecording</key>
+			<real>699496156.27848303</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>34A95094-86F7-4726-BEAD-24F0F051DA03</string>
+		</dict>
+		<key>608B043E-43B2-402A-8BAC-029DA0E02523</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>608B043E-43B2-402A-8BAC-029DA0E02523.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496315.77326</real>
+			<key>timeStoppedRecording</key>
+			<real>699496315.80894101</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>608B043E-43B2-402A-8BAC-029DA0E02523</string>
+		</dict>
+		<key>7BE73353-9363-462E-BD6F-B3C9A6CA2F3E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7BE73353-9363-462E-BD6F-B3C9A6CA2F3E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496211.12416005</real>
+			<key>timeStoppedRecording</key>
+			<real>699496211.16203201</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>7BE73353-9363-462E-BD6F-B3C9A6CA2F3E</string>
+		</dict>
+		<key>88DBCB1C-E296-4361-8C1E-7B86A84ECFBB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>88DBCB1C-E296-4361-8C1E-7B86A84ECFBB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496878.77366602</real>
+			<key>timeStoppedRecording</key>
+			<real>699496878.82297504</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>88DBCB1C-E296-4361-8C1E-7B86A84ECFBB</string>
+		</dict>
+		<key>AA0514DE-2F31-4ADD-B493-73DA34A3C828</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AA0514DE-2F31-4ADD-B493-73DA34A3C828.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699495959.63141501</real>
+			<key>timeStoppedRecording</key>
+			<real>699495959.74689698</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>AA0514DE-2F31-4ADD-B493-73DA34A3C828</string>
+		</dict>
 		<key>E08BB79D-5663-4894-B1D6-945AF4C29F17</key>
 		<dict>
 			<key>className</key>
@@ -39,6 +209,142 @@
 			<string>Build p2-linker.c</string>
 			<key>uniqueIdentifier</key>
 			<string>E08BB79D-5663-4894-B1D6-945AF4C29F17</string>
+		</dict>
+		<key>E3903A56-314D-4BCF-A9F5-852FAA368B86</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E3903A56-314D-4BCF-A9F5-852FAA368B86.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496198.15996301</real>
+			<key>timeStoppedRecording</key>
+			<real>699496198.19451594</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>E3903A56-314D-4BCF-A9F5-852FAA368B86</string>
+		</dict>
+		<key>EB606F2F-CDDD-4BBC-B48E-44B63D949982</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EB606F2F-CDDD-4BBC-B48E-44B63D949982.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699495836.767851</real>
+			<key>timeStoppedRecording</key>
+			<real>699495836.98136199</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>EB606F2F-CDDD-4BBC-B48E-44B63D949982</string>
+		</dict>
+		<key>F3CFA88B-6BC6-4617-BFCA-1DAE9B3B54DC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F3CFA88B-6BC6-4617-BFCA-1DAE9B3B54DC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496987.01382303</real>
+			<key>timeStoppedRecording</key>
+			<real>699496987.13397205</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>F3CFA88B-6BC6-4617-BFCA-1DAE9B3B54DC</string>
+		</dict>
+		<key>F8EEEB01-4C83-4911-805D-CE8570948289</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F8EEEB01-4C83-4911-805D-CE8570948289.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>p2-linker.c project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>p2-linker.c</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build p2-linker.c</string>
+			<key>timeStartedRecording</key>
+			<real>699496291.24357295</real>
+			<key>timeStoppedRecording</key>
+			<real>699496291.36227202</real>
+			<key>title</key>
+			<string>Build p2-linker.c</string>
+			<key>uniqueIdentifier</key>
+			<string>F8EEEB01-4C83-4911-805D-CE8570948289</string>
 		</dict>
 	</dict>
 </dict>
