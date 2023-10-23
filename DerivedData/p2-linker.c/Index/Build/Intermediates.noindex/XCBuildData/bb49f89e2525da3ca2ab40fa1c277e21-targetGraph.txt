@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+p2-linker.c in p2-linker.c, no dependencies

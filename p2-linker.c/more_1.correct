@@ -1,0 +1,29 @@
+9 2 10 7
+8454153
+8650752
+23527424
+16842756
+16842749
+8388608
+9502728
+13828101
+25165824
+0
+0
+Like T 0
+Dumb T 1
+Start T 3
+Aye T 4
+Noooo T 5
+FUCK T 6
+Shit T 7
+SubAdr U 0
+Damn U 0
+Nah U 0
+0 lw five
+1 lw SubAdr
+5 lw SubAdr
+6 lw done
+7 sw Noooo
+0 .fill Damn
+1 .fill Nah

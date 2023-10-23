@@ -73,11 +73,19 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "locals.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "global_0.correct"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "global_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "globals.correct"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
@@ -125,6 +133,10 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "edges.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "c_0.correct"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -138,10 +150,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "g_0.correct"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "g_1.correct"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "more_0.correct"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "more_1.correct"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
